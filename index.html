@@ -1,3 +1,7 @@
+<!-- Having lots of issues using float property for profile section while keeping the format intact when resizing browser.
+     Will convert profile section using bootstrap grid system or use flexbox
+     Added small photo next to footer text and applied float property there instead.-->
+
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -9,92 +13,98 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      
-      <div class="profile">
-        <h1>Woo Jin Kim</h1>
 
-        <div class="box1"><img src="img/headshot.jpg" alt="Woo Jin Kim"> </div>
-
-        <div class="about">
-          <h2>About Me</h2>
-          <p>Education: <br>
-            &emsp;<strong>B.S. Electrical Engineering</strong> <span class="date">UC Irvine '16</span> <br>
-            &emsp;<strong>Current Epicodus student</strong> <span class="date">(Jan 2021-Jul 2021)</span>
-          </p>
-          <p>Job Experience: RPM Engineers <span class="date">(Jan 2019 - Dec 2019)</span></p>
-          <p>Skills: HTML, CSS, Java, C, Python, Microsoft Office, AutoCAD </p>
-          <a href="img/resume.pdf">Resume</a>
+    <div class="profile">
+      <h1 class="bg-info">Woo Jin Kim</h1>
+      <div class="row">
+        <img src="img/headshot.jpg" alt="Woo Jin Kim">
+        <div class="box1">
+          <div class="about">
+            <h3>About Me</h3>
+            <p>Education: <br>
+              &emsp;<strong>B.S. Electrical Engineering</strong> <span class="date">UC Irvine '16</span> <br>
+              &emsp;<strong>Current Epicodus student</strong> <span class="date">(Jan 2021-Jul 2021)</span>
+            </p>
+            <p>Job Experience: <br>
+              RPM Engineers <span class="date">(Jan 2019 - Dec 2019)</span>
+            </p>
+            <p>Skills: HTML, CSS, Java, C, Python, Microsoft Office, AutoCAD </p>
+            <a href="img/resume.pdf">Resume</a>
+          </div>
         </div>
       </div>
     </div>
-    <br>
-    
+ 
+
     <div class="row">
       <div class="col-6">
         <div class="card">
           <div class="card-body">
             <h2 class="card-title">My projects</h2>
-              <ul class="card-text">
-                <li>
-                  <a href="https://github.com/300hHZ/dogepage">Doge Page</a>
-                  <ul>
-                    <li>Website dedicated to the best dog in the world.</li>
-                    <li>Languages used: html, css </li>
-                  </ul>
-                </li>
+            <ul class="card-text">
+              <li>
+                <a href="https://github.com/300hHZ/dogepage">Doge Page</a>
+                <ul>
+                  <li>Website dedicated to the best dog in the world.</li>
+                  <li>Languages used: html, css </li>
+                </ul>
+              </li>
 
-                <li>
-                  <a href="https://github.com/300hHZ/animal-shelter">Animal Shelter</a>
-                  <ul>
-                    <li>Website for an animal shelter featuring the animals still available for adoption.</li>
-                    <li>Languages used: html, css </li>
-                  </ul>
-                </li>
-                
-                <li><a href="https://github.com/300hHZ/blogging-website">Blogging Website</a>
-                  <ul>
-                    <li>Blog about my experience on the third day of Epicodus</li>
-                    <li>Languages used: html, css </li>
-                  </ul>
-                </li>
+              <li>
+                <a href="https://github.com/300hHZ/animal-shelter">Animal Shelter</a>
+                <ul>
+                  <li>Website for an animal shelter featuring the animals still available for adoption.</li>
+                  <li>Languages used: html, css </li>
+                </ul>
+              </li>
 
-                <li>
-                  <a href="https://github.com/300hHZ/vacation-site">Vacation Site</a>
-                  <ul>
-                    <li>Website that shows my ideal vacation site, travel package deals, and reviews.</li>
-                    <li>Languages used: html, css </li>
-                  </ul>
-                </li>    
-              </ul>
-            </div>
-            <span class="container">Want to see more of my projects? Let's head over to <a href="https://github.com/300hHZ?tab=repositories">GitHub</a>
-            </span>
+              <li><a href="https://github.com/300hHZ/blogging-website">Blogging Website</a>
+                <ul>
+                  <li>Blog about my experience on the third day of Epicodus</li>
+                  <li>Languages used: html, css </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="https://github.com/300hHZ/vacation-site">Vacation Site</a>
+                <ul>
+                  <li>Website that shows my ideal vacation site, travel package deals, and reviews.</li>
+                  <li>Languages used: html, css </li>
+                </ul>
+              </li>
+            </ul>
           </div>
+          <span class="container">Want to see more of my projects? Let's head over to <a
+              href="https://github.com/300hHZ?tab=repositories">GitHub</a>
+          </span>
         </div>
+      </div>
+
       <div class="col-6">
         <div class="card">
           <div class="card-body">
             <h2 class="card-title">5 Fun Facts!</h2>
-        <ol>
-          <li>I used to compete in dance team competitions.</li>
-          <li>I play Super Smash Brothers Melee for the Nintendo Gamecube.</li>
-          <li>I'm teaching myself how to DJ (<a href="https://soundcloud.com/300hHZ">Visit my Soundcloud!</a>)</li>
-          <li>I like to perform light shows with my LED Orbit</li>
-          <li>I can form 7-10 chins on demand. :)))))))</li>
-        </ol>
-      </div>
-      
-    
+            <ol>
+              <li>I used to compete in dance team competitions.</li>
+              <li>I play Super Smash Brothers Melee for the Nintendo Gamecube.</li>
+              <li>I'm teaching myself how to DJ (<a href="https://soundcloud.com/300hHZ">Visit my Soundcloud!</a>)</li>
+              <li>I like to perform light shows with my LED Orbit</li>
+              <li>I can form 7-10 chins on demand. :)))))))</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="footer">
-      <p>Thank you for visiting my portfolio! <br>      
-        Interested in getting in contact? Email me at <a href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a>
+      <img src="img/grad.jpg" alt="Toddler Woo Jin">
+      <p>Thank you for visiting my portfolio! <br>
+        Interested in getting in contact? Email me at <a
+          href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a>
       </p>
 
       <a href="https://300hHZ.github.io/portfolio">Check out this portfolio page on GitHub Pages</a>
-    </div>  
+    </div>
   </div>
 </body>
 
