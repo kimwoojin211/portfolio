@@ -1,4 +1,12 @@
 img{
-  width: 20%;
+  width: 175px;
   height: auto;
+}
+
+.profile{
+  text-align: center;
+}
+
+.date{
+  font-style: italic;
 }
