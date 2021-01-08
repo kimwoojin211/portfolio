@@ -8,12 +8,10 @@
 
 .profile img{
   width: 100%;
-  min-width: 200px;
-  max-width: 400px;
+  max-width: 350px; 
   height: auto;
   /* float: left; */
   margin: auto;
-  vertical-align: middle;
 }
 
 .box1{
@@ -23,15 +21,17 @@
   margin: auto;
   padding: 10px;
   box-sizing: border-box;
-  vertical-align: middle;
 }
 
 .about{
   text-align: left;
-  vertical-align: middle;
 }
 
 .date{
+  font-style: italic;
+}
+
+.language{
   font-style: italic;
 }
 
