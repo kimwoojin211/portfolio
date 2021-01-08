@@ -5,11 +5,6 @@ img{
   padding-right: 30px;  
 }
 
-ul{
-  margin-left: 0;
-  padding-left: 10px;
-}
-
 .profile{
   margin: auto;
   text-align: center;
@@ -29,7 +24,8 @@ ul{
 } */
 
 .footer{
+  padding-top: 40px;
   position: relative;
   bottom: 0%;
-  text-align: left;
+
 }
