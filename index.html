@@ -1,7 +1,4 @@
-<!-- Having lots of issues using float property for profile section while keeping the format intact when resizing browser.
-     Will convert profile section using bootstrap grid system or use flexbox
-     Added small photo next to footer text and applied float property there instead.-->
-
+<!-- Not completely satisfied with how profile adjusts with browser, but I need to move on. -->
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -17,19 +14,22 @@
     <div class="profile">
       <h1 class="bg-info">Woo Jin Kim</h1>
       <div class="row">
-        <img src="img/headshot.jpg" alt="Woo Jin Kim">
-        <div class="box1">
-          <div class="about">
-            <h3>About Me</h3>
-            <p>Education: <br>
-              &emsp;<strong>B.S. Electrical Engineering</strong> <span class="date">UC Irvine '16</span> <br>
-              &emsp;<strong>Current Epicodus student</strong> <span class="date">(Jan 2021-Jul 2021)</span>
-            </p>
-            <p>Job Experience: <br>
-              RPM Engineers <span class="date">(Jan 2019 - Dec 2019)</span>
-            </p>
-            <p>Skills: HTML, CSS, Java, C, Python, Microsoft Office, AutoCAD </p>
-            <a href="img/resume.pdf">Resume</a>
+        <div class="col-6"> <img src="img/headshot.jpg" alt="Woo Jin Kim"> </div>
+        <div class="col-6">
+          <div class="box1">
+            <div class="about">
+              <h3>About Me</h3>
+              <p>Education: <br>
+                &emsp;<strong>B.S. Electrical Engineering</strong> <span class="date">UC Irvine '16</span> <br>
+                &emsp;<strong>Current Epicodus student</strong> <span class="date">(Jan 2021-Jul 2021)</span>
+              </p>
+              <p>Job Experience: <br>
+                &emsp;<strong>RPM Engineers</strong> <span class="date">(Jan 2019 - Dec 2019)</span>
+              </p>
+              <p>Skills: <br>
+                &emsp;HTML, CSS, Java, C, Python, Microsoft Office, AutoCAD </p>
+              <a href="img/resume.pdf">Resume</a>
+            </div>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
             </ul>
           </div>
           <span class="container">Want to see more of my projects? Let's head over to <a
-              href="https://github.com/300hHZ?tab=repositories">GitHub</a>
+              href="https://github.com/300hHZ?tab=repositories">GitHub</a>.
           </span>
         </div>
       </div>
@@ -99,11 +99,13 @@
     <div class="footer">
       <img src="img/grad.jpg" alt="Toddler Woo Jin">
       <p>Thank you for visiting my portfolio! <br>
-        Interested in getting in contact? Email me at <a
-          href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a>
+        Interested in getting in contact? Email me at <a href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a>
+        <br>
+        <br>
+        <a href="https://300hHZ.github.io/portfolio">Check out this portfolio page on GitHub Pages</a>
       </p>
 
-      <a href="https://300hHZ.github.io/portfolio">Check out this portfolio page on GitHub Pages</a>
+
     </div>
   </div>
 </body>

@@ -1,35 +1,38 @@
-img{
-  width: 225px;
-  height: auto;
-  float: left;
-  margin-top: 10px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
 .profile{
   margin: auto;
   text-align: center;
   width: 100%;
   margin-bottom: 10px;
+  display: block;
 }
 
-.date{
-  font-style: italic;
-}
-
-.about{
-  text-align: left;
+.profile img{
+  width: 100%;
+  min-width: 200px;
+  max-width: 400px;
+  height: auto;
+  /* float: left; */
+  margin: auto;
+  vertical-align: middle;
 }
 
 .box1{
   width: auto;
   border: solid black;
   border-width: 1px;
-  margin: 10px;
+  margin: auto;
   padding: 10px;
   box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.about{
+  text-align: left;
+  vertical-align: middle;
+}
+
+.date{
+  font-style: italic;
 }
 
 /*sticks footer of webpage at bottom of page*/
@@ -42,12 +45,10 @@ img{
 
 /*resizes footer photo, word wraps text to the right of photo */
 .footer img{
-  width: 8%;
-  height: auto;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 10px;
+  width: 90px;
+  height: 90px;
   float: left;
-}
-
-/*moves footer text in line with photo*/
-.footer p{
-  padding-top: 10px; 
 }
