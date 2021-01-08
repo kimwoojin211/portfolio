@@ -5,6 +5,11 @@ img{
   padding-right: 30px;  
 }
 
+ul{
+  margin-left: 0;
+  padding-left: 10px;
+}
+
 .profile{
   text-align: center;
 }
@@ -13,3 +18,15 @@ img{
   font-style: italic;
 }
 
+.about{
+  text-align: left;
+}
+
+/* .projects{
+  float: left;
+} */
+
+.footer{
+  position: relative;
+  bottom: 0%;
+}

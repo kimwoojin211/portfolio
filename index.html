@@ -1,29 +1,37 @@
+<!-- 
+    Added indenting to ul's, add footer class, add bootstrap
+    Tried for 30 minutes to format bottom half (project list and hobbies section) with floats, but too convoluted
+    Adding bootstrap.css file to implement grids.
+  -->
+
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <title>Woo Jin Kim</title>
 </head>
 
 <body>
   <div class="profile">
-  <h1>Woo Jin Kim</h1>
-  <img src="img/headshot.jpg" alt="Woo Jin Kim">
+    <h1>Woo Jin Kim</h1>
+
+    <img src="img/headshot.jpg" alt="Woo Jin Kim">
+
+    <div class="about">
+      <h2>About Me</h2>
+      <p>Education: <br> <br>
+        &emsp;<strong>B.S. Electrical Engineering</strong> <span class="date">UC Irvine '16</span> <br>
+        &emsp;<strong>Current Epicodus student</strong> <span class="date">(Jan 2021-Jul 2021)</span>
+      </p>
+      <p>Job Experience: RPM Engineers <span class="date">(Jan 2019 - Dec 2019)</span></p>
+      <p>Skills: HTML, CSS, Java, C, Python, Microsoft Office, AutoCAD </p>
+      <p>OS: Windows, Linux</p>
+    </div>
   </div>
 
-  <div class="about">
-    <h2>About Me</h2>
-    <p>Education: <br> <br>
-      &emsp;<strong>B.S. Electrical Engineering</strong> <span class="date">University of California, Irvine '16</span> <br>
-      &emsp;<strong>Current Epicodus student</strong> <span class="date">(Jan 2021-Jul 2021)</span>
-    </p>
-    <p>Job Experience: RPM Engineers <span class="date">(Jan 2019 - Dec 2019)</span></p>
-    <p>Skills: HTML, CSS, Java, C, Python, Microsoft Office, AutoCAD </p>
-    <p>OS: Windows, Linux</p>
-
-  </div>
-  <div>
+  <div class="projects">
     <h2>My projects</h2>
     <ol>
       <li>
@@ -59,17 +67,21 @@
     <p>Want to see more of my projects? Let's head over to <a href="https://github.com/300hHZ?tab=repositories">GitHub</a></p>
   </div>
 
-  <h4>Interests, Hobbies, Skills</h4>
-  <ul>
-    <li>Coding</li>
-    <li>Competitive Gaming</li>
-    <li>Music</li>
-    <li>Dancing</li>
-  </ul>
+  <div class="hobbies">   
+    <h2>Interests & Hobbies</h2>
+    <ul>
+      <li>Coding</li>
+      <li>Competitive Gaming</li>
+      <li>Music</li>
+      <li>Dancing</li>
+    </ul>
+  </div>
 
-  <p>Interested in getting in contact? Email me at <a href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a></p>
+  <div class="footer">
+    <p>Interested in getting in contact? Email me at <a href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a></p>
 
-  <a href="https://300hHZ.github.io/portfolio">Check out this portfolio page on GitHub Pages</a>
+    <a href="https://300hHZ.github.io/portfolio">Check out this portfolio page on GitHub Pages</a>
+  </div>  
 </body>
 
 </html>
