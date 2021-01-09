@@ -24,10 +24,15 @@ A personal portfolio webpage, featuring my name, picture, description, projects,
 * **Layout formatting could be cleaner, especially when browser is resized.**
 * **Profile picture scaling is situationally a little choppy when resizing browser window. (Partly intentional)**
 * **Plain to look at.**
+
+## Link to Github pages
+
+[Github pages](https://300hhz.github.io/portfolio/)
 ## License
 
 MIT
 
+Copyright (c) 2020 Woo Jin Kim
 ## Contact Information
 
 _Woo Jin Kim (kimwoojin211@gmail.com)_
