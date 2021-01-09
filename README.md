@@ -11,7 +11,7 @@
 
 ## Description
 
-TBD
+A personal portfolio webpage, featuring my name, picture, description, projects, interests and hobbies, and fun facts.
 
 ## Setup/Installation Requirements
 
@@ -21,8 +21,9 @@ TBD
 
 ## Known Bugs
 
-* Empty
-
+* **Layout formatting could be cleaner, especially when browser is resized.**
+* **Profile picture scaling is situationally a little choppy when resizing browser window. (Partly intentional)**
+* **Plain to look at.**
 ## License
 
 MIT
