@@ -1,8 +1,8 @@
-<!-- Discovered row align-items-center to align profile section to middle of its row. Much more satisfied with how it resizes. 
-     Changed Projects section to only have bullet points for description and language-->
+<!-- Pretty plain, but overall pretty satisfied with how this turned out-->
 <!DOCTYPE html>
 <html lang="en-us">
 
+<!-- Links to styles and bootstrap CSS -->
 <head>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -11,18 +11,19 @@
 
 <body>
   <div class="container">
-
-    <div class="profile">
-      <h1 class="bg-info">Woo Jin Kim</h1>
-      <div class="row align-items-center">
-        <div class="col-6"> <img src="img/headshot.jpg" alt="Woo Jin Kim"> </div>
+    <div class="profile"> <!-- Profile Section -->
+      <h1 class="bg-info">Woo Jin Kim</h1> 
+      <div class="row align-items-center"> <!-- Establishes space for the first half of webpage, keeping contents vertically centered -->
+        <div class="col-6"> 
+          <img src="img/headshot.jpg" alt="Woo Jin Kim"> <!-- Profile Picture -->
+        </div>
         <div class="col-6">
           <div class="box1">
-            <div class="about">
+            <div class="about"> <!-- About Me Section -->
               <h2>About Me</h2>
               <p>Education: <br>
                 &emsp;<strong>B.S. Elec Engineering</strong> <span class="date">UC Irvine '16</span> <br>
-                &emsp;<strong>Epicodus</strong> <span class="date">(01/2021-07/2021)</span>
+                &emsp;<strong>Epicodus</strong> <span class="date">(Graduating 07/2021)</span>
               </p>
               <p>Job Experience: <br>
                 &emsp;<strong>RPM Engineers</strong> <span class="date">(01/2019 - 12/2019)</span>
@@ -36,30 +37,29 @@
       </div>
     </div>
  
-
-    <div class="row">
+    <div class="row"> <!-- Establishes space for the second half of webpage -->
       <div class="col-6">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title">My projects</h2>
+            <h2 class="card-title">My projects</h2> <!-- Projects Section -->
             <p class="card-text">
                 <p><a href="https://github.com/300hHZ/dogepage">Doge Page</a></p>
                 <ul>
-                  <li>Website dedicated to the <strong><em>best</em></strong> dog in the world.</li>
+                  <li>Webpage dedicated to the <strong><em>best</em></strong> dog in the world.</li>
                   <li>Languages used: <span class="language">html, css</span> </li>
                 </ul>
 
               <p>
                 <a href="https://github.com/300hHZ/animal-shelter">Animal Shelter</a>
                 <ul>
-                  <li>Website for an animal shelter featuring the animals still available for adoption.</li>
+                  <li>Webpage for an animal shelter featuring the animals still available for adoption.</li>
                   <li>Languages used: <span class="language">html, css</span> </li>
                 </ul>
               </p>
 
               <p><a href="https://github.com/300hHZ/blogging-website">Blogging Website</a>
                 <ul>
-                  <li>Blog about my experience on the third day of Epicodus</li>
+                  <li>Blog webpage about my experience on the third day of Epicodus</li>
                   <li>Languages used: <span class="language">html, css</span> </li>
                 </ul>
               </p>
@@ -67,7 +67,7 @@
               <p>
                 <a href="https://github.com/300hHZ/vacation-site">Vacation Site</a>
                 <ul>
-                  <li>Website that shows my ideal vacation site, travel package deals, and reviews.</li>
+                  <li>Webpage that shows my ideal vacation site, travel package deals, and reviews.</li>
                   <li>Languages used: <span class="language">html, css</span> </li>
                 </ul>
               </p>
@@ -82,7 +82,7 @@
         <div class="row">
           <div class="card">
             <div class="card-body">
-              <h2 class="card-title">5 Fun Facts!</h2>
+              <h2 class="card-title">5 Fun Facts!</h2> <!-- Fun Facts Section -->
               <ol>
                 <li>I used to compete in dance team competitions.</li>
                 <li>I play Super Smash Brothers Melee for the Nintendo Gamecube.</li>
@@ -93,13 +93,31 @@
             </div>
           </div>
         </div>
-
+        <br>
+        <br>
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Interests, Hobbies, & Other Skills!</h2> <!-- Interests Section-->
+              <ul>
+                <li>Coding</li>
+                <li>Instrumental Music</li>
+                <li>Music Festivals</li>
+                <li>Competitive Video Games</li>
+                <li>Chess</li>
+                <li>Streaming</li>
+                <li>Dancing</li>
+                <li>Climbing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer"> <!-- Footer Section-->
       <img src="img/grad.jpg" alt="Toddler Woo Jin">
-      <p>Thank you for visiting my portfolio! <br>
+      <p class="bg-dark text-light">Thank you for visiting my portfolio! <br>
         Interested in getting in contact? Email me at <a href="mailto:kimwoojin211@gmail.com">kimwoojin211@gmail.com</a>
         <br>
         <br>

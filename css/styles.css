@@ -1,3 +1,4 @@
+/* centers name, profile picture, and about me section*/
 .profile{
   margin: auto;
   text-align: center;
@@ -6,14 +7,15 @@
   display: block;
 }
 
+/* controls profile picture resizing as browser size changes*/
 .profile img{
   width: 100%;
   max-width: 350px; 
   height: auto;
-  /* float: left; */
   margin: auto;
 }
 
+/* box around About Me Section*/
 .box1{
   width: auto;
   border: solid black;
@@ -23,14 +25,17 @@
   box-sizing: border-box;
 }
 
+/* Overrides .profile's centered text alignment */
 .about{
   text-align: left;
 }
 
+/* italicizes all dates*/
 .date{
   font-style: italic;
 }
 
+/* italicizes languages (html, css, etc.) used in projects section*/
 .language{
   font-style: italic;
 }
@@ -45,10 +50,8 @@
 
 /*resizes footer photo, word wraps text to the right of photo */
 .footer img{
-  margin-top: 5px;
-  margin-left: 15px;
   margin-right: 10px;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   float: left;
 }
