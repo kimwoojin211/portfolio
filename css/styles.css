@@ -1,3 +1,7 @@
+body{
+  background-color: silver;
+}
+
 /* centers name, profile picture, and about me section*/
 .profile{
   margin: auto;
