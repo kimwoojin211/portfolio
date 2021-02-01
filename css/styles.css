@@ -1,5 +1,27 @@
 body{
-  background-color: silver;
+  /* font-family: ; */
+  background-color: black;
+}
+
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background: linear-gradient(225deg, #000000,#011a17);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  animation: gradient 5s ease infinite;
+  background-size: 300% 300%;
+}
+
+.nav-item{
+  display: flex;
+}
+
+
+#Contact{
+  color: #ffffff;
 }
 
 /* centers name, profile picture, and about me section*/
@@ -9,6 +31,18 @@ body{
   width: 100%;
   margin-bottom: 10px;
   display: block;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 100% ;
+  }
+  50% {
+    background-position: 30% 0% ;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 /* controls profile picture resizing as browser size changes*/

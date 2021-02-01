@@ -1,0 +1,42 @@
+1/31/2021
+
+Attempt to redesign portfolio page.
+Gonna start from scratch. Hiding/commenting out everything for now. 
+(I probably don't even need any of the old stuff, honestly, since I'm redesigning everything.)
+
+Starting with Sticky Navigation Bar.
+(Inspiration from https://www.instagram.com/p/CKVcqkQgJNK/)
+
+adding dir="rtl" to the nav tag did not align everything to the right.
+
+wanted to make my background have a dark teal accent:
+looked up how to make gradients:
+https://cssgradient.io/
+
+then i decided i wanted to make it animated:
+https://codepen.io/P1N2O/pen/pyBNzX
+https://css-tricks.com/a-complete-guide-to-css-gradients/
+
+(i'll keep playing around w/ the keyframes block)
+
+Able to get a basic display working with bootstrap's nav class (https://getbootstrap.com/docs/4.0/components/navs/), BUT because I have 6 items, the nav bar wraps around when the viewport width is shrunk, so that it creates two rows, which i don't want.
+
+Tried to fix by having the font size responsive to the viewport width (https://css-tricks.com/viewport-sized-typography/), but that either made the font size way too small, or even applying a max function to font-size (https://css-tricks.com/how-do-you-do-max-font-size-in-css/) it would still wrap around, even when trying to put white-space:nowrap into both nav and nav-item classes
+
+now experimenting with bootstrap's navbar class (https://getbootstrap.com/docs/4.0/components/navbar/)
+
+(ml-auto) is used to justify/align stuff to the right with flexbox (mr-auto is used to left justify/align) (https://getbootstrap.com/docs/4.0/utilities/flex/#auto-margins)
+
+<span class="sr-only"></span> hides whatever is inside the span unless it's read by a screen reader (ACCESSIBILITY! WOOOO) (https://getbootstrap.com/docs/4.0/utilities/screenreaders/)
+
+expand-sm to give nav bar more room to breathe before collapsing
+
+collapseable giving me a little trouble.
+
+at first, the menu icon wasn't showing up at all. realized it was cause i didn't have the "navbar-dark" class set to the nav tag, because i didn't want it to override my animated gradient which i realize is dumb, because my gradient would override it, not the other way around. Plus, setting "navbar-dark" class automatically set the font color to white, so i shoulda just done that to begin with.
+
+Then the collapsing function was working fine, but when I pressed the now visible menu icon, the menu wasn't being expanded to show the hidden content. After a lot of searching, realized that bootstrap has it's own script that i needed to link. 
+
+Now I'm trying to implement having a static contact clickable while keeping the rest of the navbar content as collapseable. But I'm having a hard time formatting it. Specifically, Either the button moves down with the expanded menu, or the Contact text gets pushed directly to where the nav-bar brand is. 
+
+Think i'm gonna take a break here for now. This is pretty much what I wanted to accomplish, as long as I can figure  6:50pm
