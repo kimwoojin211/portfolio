@@ -1,6 +1,12 @@
 body{
   /* font-family: ; */
   background-color: black;
+  background-image: URL("./../img/IMG_0730-2.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: 0 -130px;
+  font-size: 20px;
+  display: flex;
 }
 
 .navbar{
@@ -8,7 +14,7 @@ body{
   top:0;
   left:0;
   width:100%;
-  background: linear-gradient(225deg, #000000,#011a17);
+  background: linear-gradient(225deg, #000000,#022b26);
   padding-top: 10px;
   padding-bottom: 10px;
   animation: gradient 5s ease infinite;
@@ -22,7 +28,28 @@ body{
 
 #Contact{
   color: #ffffff;
+  margin-right: 5px;
 }
+
+#contactBar{
+  z-index: -1;
+  position: fixed;
+  border-width: 4px;
+  border-style: solid;
+  border-color: silver;
+  justify-content: flex-end;
+  top:43px;
+  right:0;
+  width:400px;
+  height:250px;
+  background: black;
+  display: flex;
+  animation: gradient 5s ease infinite;
+  background-size: 4000% 100%;
+  border-radius:25px;
+  opacity: 0.5;
+}
+
 
 /* centers name, profile picture, and about me section*/
 .profile{
