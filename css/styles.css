@@ -31,25 +31,41 @@ body{
   margin-right: 5px;
 }
 
-#contactBar{
+#contactBox{
   z-index: -1;
   position: fixed;
   border-width: 4px;
   border-style: solid;
   border-color: silver;
-  justify-content: flex-end;
+    flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   top:43px;
-  right:0;
-  width:400px;
+  right:5px;
+  width:300px;
   height:250px;
   background: black;
   display: flex;
-  animation: gradient 5s ease infinite;
-  background-size: 4000% 100%;
   border-radius:25px;
   opacity: 0.5;
 }
 
+.contactInfo{
+  color: white;
+}
+
+.icons{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.icons>img{
+  width:30px;
+  height:30px;
+}
+.usernames{
+  padding-left: 15px;
+  vertical-align: bottom;
+}
 
 /* centers name, profile picture, and about me section*/
 .profile{

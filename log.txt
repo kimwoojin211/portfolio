@@ -40,3 +40,17 @@ Then the collapsing function was working fine, but when I pressed the now visibl
 Now I'm trying to implement having a static contact clickable while keeping the rest of the navbar content as collapseable. But I'm having a hard time formatting it. Specifically, Either the button moves down with the expanded menu, or the Contact text gets pushed directly to where the nav-bar brand is. 
 
 Think i'm gonna take a break here for now. This is pretty much what I wanted to accomplish, as long as I can figure  6:50pm
+
+
+
+02/22/21
+Managed to get a contact box with info on it all nice and snazzed out.
+Things to do with it:
+make icon and usernames clickable with hyperlinks to email address or social media page or discord invite.
+Stylize ContactBox (maybe with neon like border? like Mike Pengel's Pizza Site?) I kind of like how it looks right now too.)
+Stylize the font for the usernames. (maybe with same neon lighting as contactbox border)
+Add an animation? like an electrical pulse running through the border, turning on the neon lights.)
+Add Click Listener and slide animation for when user clicks on Contact button.
+
+Make a credits page?(Make it accessible via a small message hyperlink down at very bottom of page) Thanking everyone who gave me ideas for each feature of the portfolio, and any resource i use (like jabari's photo).
+Fix navbar gradient to make it more noticeable.
