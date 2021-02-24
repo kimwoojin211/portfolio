@@ -54,3 +54,13 @@ Add Click Listener and slide animation for when user clicks on Contact button.
 
 Make a credits page?(Make it accessible via a small message hyperlink down at very bottom of page) Thanking everyone who gave me ideas for each feature of the portfolio, and any resource i use (like jabari's photo).
 Fix navbar gradient to make it more noticeable.
+
+02/23/2021
+
+Thank you Mike Pingel for your pizza parlor code for your neon letter styling.
+
+and for your font style code.
+
+thank you for all of it lel.
+
+trying to figure out what for the neon shadow looks best. settled on this ghosty black on black border shadow thing that looks pretty tight. it looked pretty corny with the border contrasting as silver or yellow or something, but the black border gives it that little bit of texture.
