@@ -28,7 +28,7 @@ img{
   padding-top: 25px;
   padding-bottom: 25px;
   background-size: 400% 400%;
-  z-index:0;
+  z-index:2;
   transition: all 0.3s ease-in-out;
 
 }
@@ -72,7 +72,7 @@ img{
 }
 
 #contactBox{
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   border-width: 4px;
   border-style: solid;
@@ -81,18 +81,20 @@ img{
   justify-content: space-around; */
   align-items: stretch;
   top:80px;
-  right:5px;
+  right:10px;
   width:300px;
   height:220px;
   background: black;
   display: none;
   border-radius:20px;
-  opacity: 0.7;
+  opacity: 0.73;
   box-shadow: 0px 0px 1px black,
   0px 0px 8px black,
+  0px 0px 10px white,
   0px 0px 20px black,
   0px 0px 30px black,
   0px 0px 45px black,
+  0px 0px 50px white,
   0px 0px 60px black;
   transition: top 0.3s ease-in-out;
 }
@@ -103,7 +105,6 @@ img{
 
 
 .contactIcons{
-  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -112,7 +113,6 @@ img{
 
 .contactInfo{
   color: white;
-  opacity: 1;
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
@@ -186,7 +186,7 @@ img{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index:-2;
+  z-index:0;
 }
 
 .hero::before{
@@ -208,7 +208,7 @@ img{
   font-size: 40px;
   color: white;
   text-shadow: 3px 4px black, 5px 5px rgb(112, 128, 141);
-  z-index:0;
+  z-index:1;
 }
 
 .content{
@@ -237,8 +237,9 @@ img{
 /*sticks footer of webpage at bottom of page*/
 .footer{
   padding-top: 40px;
+  padding-bottom: 10px;
   position: relative;
-  bottom: 0%;
+  bottom: 0;
   text-align: center;
 }
 /* centers name, profile picture, and about me section*/
