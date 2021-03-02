@@ -1,10 +1,5 @@
 body{
-  /* font-family: ; */
   background-color: black;
-  /* background-image: URL("./../img/IMG_0730-2.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: 0 -130px; */
   font-size: 20px;
 }
 
@@ -13,174 +8,12 @@ img{
   height:100vh;
 }
 
-.sections h2{
-  color:white;
-
-}
-
-.navbar{
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background: linear-gradient(60deg, #000303,#032e26);
-  animation: gradient 4s ease infinite;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-size: 400% 400%;
-  z-index:2;
-  transition: all 0.3s ease-in-out;
-
-}
-.navbar a{
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar a.active, .navbar a:hover, #contact:hover{
-  color: white;
-  text-shadow: 0px 0px 5px white,
-    0px 0px 10px white,
-    0px 0px 20px white;
-}
-
-.navbar.active{
-  background: linear-gradient(45deg, #000808,#03241e);
-  animation: gradient 6s ease infinite;
-  background-size: 300% 300%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.nav-item{
-  display: flex;
-}
-
-.navbar-nav{
-  display: flex;
-  justify-content: space-between;
-}
-
-
-#contact{
-  color: rgba(255,255,255,.5);
-  margin-right: 5px;
-  padding-left: 10px;
-}
-
-#contact.active{
-  color: white;
-}
-
-#contactBox{
-  z-index: 1;
-  position: fixed;
-  border-width: 4px;
-  border-style: solid;
-  /* border-color: rgb(238, 231, 155); cooler without border-color*/
-  /* flex-direction: column;
-  justify-content: space-around; */
-  align-items: stretch;
-  top:80px;
-  right:10px;
-  width:300px;
-  height:220px;
-  background: black;
-  display: none;
-  border-radius:20px;
-  opacity: 0.73;
-  box-shadow: 0px 0px 1px black,
-  0px 0px 8px black,
-  0px 0px 10px white,
-  0px 0px 20px black,
-  0px 0px 30px black,
-  0px 0px 45px black,
-  0px 0px 50px white,
-  0px 0px 60px black;
-  transition: top 0.3s ease-in-out;
-}
-
-#contactBox.active{
-  top:50px;
-}
-
-
-.contactIcons{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-evenly;
-}
-
-.contactInfo{
-  color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
-
-.contactIcons>a>img{
-  width:30px;
-  height:30px;
-  display: flex;
-}
-.usernames{
-  /* padding-left: 15px; */
-  font-family: sans-serif;
-  color: white;
-  display:flex;
-}
-.usernames:hover{
-  color: white;
-}
-
-.usernames.gmail{
-  text-shadow: 0px 0px 1px green,
-  0px 0px 5px green,
-  0px 0px 10px green,
-  0px 0px 20px green,
-  0px 0px 30px green,
-  0px 0px 40px green;
-  display:flex;
-}
-.usernames.ig{
-  text-shadow: 0px 0px 1px rgb(202, 6, 202),
-  0px 0px 5px rgb(202, 6, 202),
-  0px 0px 10px rgb(202, 6, 202),
-  0px 0px 20px rgb(202, 6, 202),
-  0px 0px 30px rgb(202, 6, 202),
-  0px 0px 40px rgb(202, 6, 202);
-  display:flex;
-}
-
-.usernames.linkedin{
-  text-shadow: 0px 0px 1px rgb(6, 175, 175),
-  0px 0px 5px rgb(6, 175, 175),
-  0px 0px 10px rgb(6, 175, 175),
-  0px 0px 20px rgb(6, 175, 175),
-  0px 0px 30px rgb(6, 175, 175),
-  0px 0px 40px rgb(6, 175, 175);
-  display:flex;
-}
-.usernames.discord{
-  text-shadow: 0px 0px 1px rgb(96, 179, 247),
-  0px 0px 5px rgb(96, 179, 247),
-  0px 0px 25px rgb(96, 179, 247),
-  0px 0px 40px rgb(96, 179, 247),
-  0px 0px 60px rgb(96, 179, 247),
-  0px 0px 80px rgb(96, 179, 247);
-  display:flex;
-}
-
-
 .hero{
   position: relative;
   width: 100%;
   height:100vh;
   display:flex;
-  background-image: url("./../img/IMG_0730-2.jpg");
+  background-image: url("./../assets/images/IMG_0730-2.jpg");
   justify-content:center;
   align-items: center;
   background-position: center;
@@ -223,17 +56,6 @@ img{
   display: flex;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 100% 0% ;
-  }
-  50% {
-    background-position: 30% 100% ;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
 /*sticks footer of webpage at bottom of page*/
 .footer{
   padding-top: 40px;
@@ -241,49 +63,6 @@ img{
   position: relative;
   bottom: 0;
   text-align: center;
-}
-/* centers name, profile picture, and about me section*/
-.profile{
-  margin: auto;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 10px;
-  display: block;
-}
-
-
-
-/* controls profile picture resizing as browser size changes*/
-.profile img{
-  width: 100%;
-  max-width: 350px; 
-  height: auto;
-  margin: auto;
-}
-
-/* box around About Me Section*/
-.box1{
-  width: auto;
-  border: solid black;
-  border-width: 1px;
-  margin: auto;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-/* Overrides .profile's centered text alignment */
-.about{
-  text-align: left;
-}
-
-/* italicizes all dates*/
-.date{
-  font-style: italic;
-}
-
-/* italicizes languages (html, css, etc.) used in projects section*/
-.language{
-  font-style: italic;
 }
 
 

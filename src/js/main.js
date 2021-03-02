@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
   $('#navbar').load('nav.html', function () {
     $("#homeNav").addClass("active");
