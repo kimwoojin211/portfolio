@@ -1,7 +1,8 @@
-  $(document).ready(function () {
-    $('#navbar').load('./../nav.html', function () {
-      $(".contactIcons").children().css("display", "none");
-      $(".contactInfo").children().css("display", "none");
+
+$(document).ready(function () {
+  $('#navbar').load('./../nav.html', function () {
+    $(".contactIcons").children().css("display", "none");
+    $(".contactInfo").children().css("display", "none");
 
     //click on contact function
     $("#contact").on("click", function (event) {
@@ -36,7 +37,7 @@
         $("#contactBox").removeClass('active');
       }
 
-    }
+    };
     window.addEventListener('scroll', fixedNav);
-    });
   });
+});
