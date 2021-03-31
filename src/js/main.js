@@ -1,10 +1,11 @@
-import '../css/styles.css';
-import '../css/nav.css';
-import './nav.js';
+import Nav from './nav.js';
 
-$(document).ready(function(){
-  $('#navbar').load('nav.html', function () {
-    $("#homeNav").addClass("active");
-    $("#homeNav > .sr-only").text("(current)");
-  });
+$(function(){
+  navbarInitHome();
 });
+
+async function navbarInitHome(){
+  await Nav.navbarInit();
+  $("#homeNav").addClass("active");
+  $("#homeNav > .sr-only").text("(current)");
+}

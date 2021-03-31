@@ -4,13 +4,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: {
-    Index: './src/js/main.js',
-    Nav: './src/js/nav.js',
-  },
+  entry: './src/js/main.js',
   output: {
-    filename: '[name].js',
-    path: __dirname + '/dist',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -26,15 +23,6 @@ module.exports = {
         collapseWhitespace: true
       }
     }), 
-    new HtmlWebpackPlugin({
-      template: './src/nav.html',
-      filename: 'nav.html',
-
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true
-      }
-    }),
     new Dotenv()
   ],
   module: {
