@@ -1,9 +1,10 @@
 import $ from 'jquery';
+import '../css/nav.css';
 
 export default class Nav {
   static navbarInit()
   {
-    $("#navbar").innerHTML += `
+    $("#navbar").html(`
     <nav class="navbar navbar-expand-md">
       <a class="navbar-brand mr-auto" href="./index.html">300hHZ</a>
 
@@ -42,7 +43,7 @@ export default class Nav {
         <a class="usernames gmail" href="mailto:kimwoojin211@gmail.com">kimwoojin211</a>
       </div>
     </div>
-    `;
+    `);
 
     $(".contactIcons").children().css("display", "none");
     $(".contactInfo").children().css("display", "none");

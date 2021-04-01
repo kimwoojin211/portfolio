@@ -1,4 +1,5 @@
 import Nav from './nav.js';
+import '../css/styles.css';
 
 $(function(){
   navbarInitHome();
