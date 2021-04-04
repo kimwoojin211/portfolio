@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import '../css/nav.css';
 
 export default class Nav {

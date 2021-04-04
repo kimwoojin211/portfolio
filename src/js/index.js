@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/styles.css';
 import Nav from './nav.js';
