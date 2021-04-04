@@ -4,7 +4,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: ['./src/js/main.js','./src/js/nav.js'],
+  entry: {
+    home: ['./src/js/index.js','./src/js/nav.js']
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
