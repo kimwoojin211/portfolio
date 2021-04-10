@@ -1,0 +1,31 @@
+body{
+  margin-top: 175px;
+  background-color: black;
+}
+
+#allRepos{
+  /* display:none; */
+  overflow-y:hidden;
+  overflow:scroll;
+  color:black;
+  margin-right: auto;
+  margin-left: auto;
+  width:50%; 
+  height: 30vw;
+  /* padding-right: 25%;
+  padding-left: 25%; */
+  /* justify-content: center; */
+}
+
+#allRepos::-webkit-scrollbar{
+  display: none;
+}
+
+#allRepos .card{
+  border-radius: 10px;
+  border-color: white;
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

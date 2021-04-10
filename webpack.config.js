@@ -2,29 +2,49 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
-    home: ['./src/js/index.js']
+    index: './src/js/index.js',
+    projects: './src/js/projects.js',
+    // shared: './src/js/nav.js'
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    },
   },
   devtool: 'eval-source-map',
   devServer: {
     contentBase: './dist'
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+      chunks: '.src/js/index.js',
       inject: 'body', minify: {
         removeComments: true,
         collapseWhitespace: true
       }
     }), 
+    new HtmlWebpackPlugin({
+      template: './src/projects.html',
+      filename: 'projects.html',
+      chunks: '.src/js/project.js',
+      inject: 'body', minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
     new Dotenv()
   ],
   module: {
