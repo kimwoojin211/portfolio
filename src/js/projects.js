@@ -21,12 +21,13 @@ function getAllRepos(repos)
     const description = repo.description;
     const language = repo.language_url;
     allRepos += `
-      <div class="card">
-        <p class="card-text">${name}</p>
-        <p class="card-text">${url}</p>
-        <p class="card-text">${description}</p>
-        <p class="card-text">${language}</p>
-      </div>
+      <a href="${url}"}
+        <div class="card">
+          <p class="card-text">${name}</p>
+          <p class="card-text">${description}</p>
+          <p class="card-text">${language}</p>
+        </div>
+      </a>
     `;
   }); 
   $("#allRepos").html(allRepos);
