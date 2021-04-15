@@ -46,17 +46,10 @@ function getAllRepos(repos)
     // });
     $("#allRepos").append(allRepos);
     document.getElementById(`allRepos${repoId}`).addEventListener("mouseover", event => {
-      // const preview = `
-      //   <iframe src="${url}">
-      //   </iframe>
-      //   `;
       $(".box iframe").attr('src',`${url}`);
     });
     document.getElementById(`allRepos${repoId}`).addEventListener("mouseout", event => {
-      // $(".box").html(`
-      //   <iframe src="">
-      //   </iframe>
-      //   `);
+
       $(".box iframe").attr('src', '');
     });
 
