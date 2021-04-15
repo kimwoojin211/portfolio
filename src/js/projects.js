@@ -14,8 +14,9 @@ function getAllRepos(repos)
 {
   console.log("yo");
   let allRepos =``;
+  let repoId = 0
   repos.forEach(repo => {
-    console.log("dawg");
+    repoId++;
     const name = repo.name;
     const url = repo.svn_url;
     const description = repo.description;
@@ -29,6 +30,11 @@ function getAllRepos(repos)
         </div>
       </a>
     `;
+    // $("#allRepos .card").hover(function () {
+    //   $("#box").html("background-color", "yellow");
+    // }, function () {
+    //   $("#box").html("");
+    // });
   }); 
   $("#allRepos").html(allRepos);
 }
@@ -43,6 +49,7 @@ $(function () {
       getAllRepos(response);
     });
 });
+
 
 
 /*
