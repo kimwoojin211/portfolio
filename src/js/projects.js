@@ -21,22 +21,47 @@ function getAllRepos(repos)
     const url = repo.svn_url;
     const description = repo.description;
     const language = repo.language_url;
-    allRepos += `
-      <a href="${url}"}
+    allRepos = `
+      <a id="allRepos${repoId}" href="${url}">
         <div class="card">
           <p class="card-text">${name}</p>
           <p class="card-text">${description}</p>
+          <p class="card-text">${url}</p>
           <p class="card-text">${language}</p>
         </div>
       </a>
     `;
-    // $("#allRepos .card").hover(function () {
-    //   $("#box").html("background-color", "yellow");
+
+    // $(`#allRepos${repoId}`).hover(function () {
+    //   const preview = `
+    //     <iframe src="${url}">
+    //     </iframe>
+    //     `;
+    //   $("#box").html(preview);
     // }, function () {
-    //   $("#box").html("");
+    //   $("#box").html(`
+    //     <iframe src="">
+    //     </iframe>
+    //     `);
     // });
+    $("#allRepos").append(allRepos);
+    document.getElementById(`allRepos${repoId}`).addEventListener("mouseover", event => {
+      // const preview = `
+      //   <iframe src="${url}">
+      //   </iframe>
+      //   `;
+      $(".box iframe").attr('src',`${url}`);
+    });
+    document.getElementById(`allRepos${repoId}`).addEventListener("mouseout", event => {
+      // $(".box").html(`
+      //   <iframe src="">
+      //   </iframe>
+      //   `);
+      $(".box iframe").attr('src', '');
+    });
+
+    
   }); 
-  $("#allRepos").html(allRepos);
 }
 
 $(function () {
