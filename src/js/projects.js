@@ -10,18 +10,42 @@ async function navbarInitProject() {
   $("#projectsNav > .sr-only").text("(current)");
 }
 
+function getFeaturedRepos(repos) {
+  let featuredRepoNames = ["portfolio", "TournamentOrganizer.Solution", "BOTW-Recipebook", ""];
+  let featuredRepoHTML = ``;
+  let repoId = 0;
+  let repo;
+
+  featuredRepoNames.forEach(repoName => {
+    if (repoName!==""){
+      repoId++;
+      repo = repos.find(rep => rep.name === repoName);
+      console.log(JSON.stringify(repo) + " " + typeof(repos) );
+      // const name = repo.name;
+      // const url = repo.svn_url;
+      featuredRepoHTML = `
+      <a id="featuredRepo${repoId}" >
+        <div class="card">
+          <p class="card-text">Hey ${repoId}</p>
+        </div>
+      </a>
+    `;
+    }
+    $("#featuredRepos").append(featuredRepoHTML);
+  });
+}
+
 function getAllRepos(repos)
 {
-  console.log("yo");
-  let allRepos =``;
-  let repoId = 0
+  let allReposHTML =``;
+  let repoId = 0;
   repos.forEach(repo => {
     repoId++;
     const name = repo.name;
     const url = repo.svn_url;
     const description = repo.description;
     const language = repo.language_url;
-    allRepos = `
+    allReposHTML = `
       <a id="allRepos${repoId}" href="${url}">
         <div class="card">
           <p class="card-text">${name}</p>
@@ -32,28 +56,15 @@ function getAllRepos(repos)
       </a>
     `;
 
-    // $(`#allRepos${repoId}`).hover(function () {
-    //   const preview = `
-    //     <iframe src="${url}">
-    //     </iframe>
-    //     `;
-    //   $("#box").html(preview);
-    // }, function () {
-    //   $("#box").html(`
-    //     <iframe src="">
-    //     </iframe>
-    //     `);
-    // });
-    $("#allRepos").append(allRepos);
+    $("#allRepos").append(allReposHTML);
+
     document.getElementById(`allRepos${repoId}`).addEventListener("mouseover", event => {
       $(".box iframe").attr('src',`${url}`);
     });
     document.getElementById(`allRepos${repoId}`).addEventListener("mouseout", event => {
-
       $(".box iframe").attr('src', '');
     });
 
-    
   }); 
 }
 
@@ -64,10 +75,23 @@ $(function () {
       if (response instanceof Error) {
         throw Error(`Github API error: ${response.message}`);
       }
-      getAllRepos(response);
+      const repos = response;
+      getAllRepos(repos);
+      getFeaturedRepos(repos);
     });
-});
 
+  $("#allReposButton").on("click", function (event) {
+    $("#allRepos").show();
+    $("#featuredRepos").hide();
+  });
+
+  $("#featuredReposButton").on("click", function (event) {
+    $("#allRepos").hide();
+    $("#featuredRepos").show();
+  });
+
+
+});
 
 
 /*
