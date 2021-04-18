@@ -11,29 +11,28 @@ async function navbarInitProject() {
 }
 
 function getFeaturedRepos(repos) {
-  let featuredRepoNames = ["portfolio", "TournamentOrganizer.Solution", "BOTW-Recipebook", ""];
+  const featuredRepoNames = { Portfolio:"portfolio", TournamentOrganizer:"TournamentOrganizer.Solution", BreathOfTheWildRecipebook: "BOTW-RecipeBook", Repo4:""};
   let featuredRepoHTML = ``;
   let repoId = 0;
   let repo;
 
-  featuredRepoNames.forEach(repoName => {
-    if (repoName!==""){
-      repoId++;
-      repo = repos.find(rep => rep.name === repoName);
-      console.log(JSON.stringify(repo) + " " + typeof(repos) );
-      // const name = repo.name;
+  for (const repoName in featuredRepoNames) {
+    repoId++;
+    repo = repos.find(rep => rep.name === featuredRepoNames[repoName]);
+    if (typeof repo === "undefined"){
+      repo = { name: "" };
+    }
       // const url = repo.svn_url;
       featuredRepoHTML = `
       <a id="featuredRepo${repoId}" >
         <div class="card">
-          <p class="card-text">Hey ${repoId}</p>
+          <p class="card-text">${repoName}</p>
         </div>
       </a>
     `;
-    }
     $("#featuredRepos").append(featuredRepoHTML);
-  });
-}
+    }
+  }
 
 function getAllRepos(repos)
 {
