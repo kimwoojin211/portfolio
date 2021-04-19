@@ -11,7 +11,7 @@ async function navbarInitProject() {
 }
 
 function getFeaturedRepos(repos) {
-  const featuredRepoNames = { Portfolio:"portfolio", TournamentOrganizer:"TournamentOrganizer.Solution", BreathOfTheWildRecipebook: "BOTW-RecipeBook", Repo4:""};
+  const featuredRepoNames = { TournamentOrganizer: "TournamentOrganizer.Solution", BreathOfTheWildRecipebook: "BOTW-RecipeBook", Repo3: "", Repo4:""};
   let featuredRepoHTML = ``;
   let repoId = 0;
   let repo;
@@ -20,19 +20,35 @@ function getFeaturedRepos(repos) {
     repoId++;
     repo = repos.find(rep => rep.name === featuredRepoNames[repoName]);
     if (typeof repo === "undefined"){
-      repo = { name: "" };
+      repo = { name: "", svn_url:"projects.html"};
     }
-      // const url = repo.svn_url;
       featuredRepoHTML = `
-      <a id="featuredRepo${repoId}" >
+      <a id="featuredRepo${repoId}" href="${repo.svn_url}" >
         <div class="card">
-          <p class="card-text">${repoName}</p>
+          <p class="card-text">${reformatString(repoName)}</p>
         </div>
       </a>
     `;
     $("#featuredRepos").append(featuredRepoHTML);
+    document.getElementById(`featuredRepo${repoId}`).addEventListener("mouseover", event => {
+      $(".box iframe").attr('src', `https://kimwoojin211.github.io/portfolio`);
+    });
+    document.getElementById(`featuredRepo${repoId}`).addEventListener("mouseout", event => {
+      $(".box iframe").attr('src', '');
+    });
     }
   }
+
+function reformatString(string) {
+  if(string.slice(0,4)=="Repo"){
+    return "";
+  }
+  else {
+    const regex = /([A-Z][a-z]+)/g;
+    const words = string.split(regex);
+    return words.filter(entry => entry !== "").join(" ").toString();
+  }
+}
 
 function getAllRepos(repos)
 {
@@ -82,11 +98,13 @@ $(function () {
   $("#allReposButton").on("click", function (event) {
     $("#allRepos").show();
     $("#featuredRepos").hide();
+    $("#view").text("All Github Repositories");
   });
 
   $("#featuredReposButton").on("click", function (event) {
     $("#allRepos").hide();
     $("#featuredRepos").show();
+    $("#view").text("Featured Github Repositories");
   });
 
 
