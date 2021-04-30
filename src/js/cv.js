@@ -12,7 +12,7 @@ async function navbarInitCV() {
 
 $(function () {
   navbarInitCV(); 
-  $(".pdf").html(`<embed src=${PdfFile} target='_blank' width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0"/>`);
+  $("#pdf").html(`<embed src=${PdfFile} target='_blank' width="100%" height="100%"/>`);
 })
 
 // const sections=["Education","Professional Experience","Research", "Skills","Accolades","Leadership"]

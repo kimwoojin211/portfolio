@@ -1,8 +1,12 @@
 body{
   background-color: white;
   font-size: 20px;
+  background-image: url("./../assets/images/trees2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: inherit;
   position: absolute;
-  top:100px;
+  top:96px;
   bottom:0;
   left:0;
   right:0;
@@ -12,4 +16,9 @@ body{
   display:flex;
   justify-content: center;
   height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#pdf{
+  width: 50%;
 }
