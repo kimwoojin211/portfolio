@@ -7,7 +7,8 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   entry: {
     index: './src/js/index.js',
-    projects: './src/js/projects.js',
+    // projects: './src/js/projects.js',
+    cv: './src/js/cv.js',
     // shared: './src/js/nav.js'
   },
   output: {
@@ -36,10 +37,19 @@ module.exports = {
         collapseWhitespace: true
       }
     }), 
+    // new HtmlWebpackPlugin({
+    //   template: './src/projects.html',
+    //   filename: 'projects.html',
+    //   chunks: '.src/js/project.js',
+    //   inject: 'body', minify: {
+    //     removeComments: true,
+    //     collapseWhitespace: true
+    //   }
+    // }),
     new HtmlWebpackPlugin({
-      template: './src/projects.html',
-      filename: 'projects.html',
-      chunks: '.src/js/project.js',
+      template: './src/cv.html',
+      filename: 'cv.html',
+      chunks: '.src/js/cv.js',
       inject: 'body', minify: {
         removeComments: true,
         collapseWhitespace: true
@@ -62,7 +72,7 @@ module.exports = {
         loader: "eslint-loader"
       },
       {
-        test: /\.(gif|png|jpe?g)$/,
+        test: /\.(gif|png|jpe?g|pdf)$/,
         use: [
           {
             loader: 'file-loader',

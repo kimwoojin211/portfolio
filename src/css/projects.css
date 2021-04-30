@@ -1,6 +1,6 @@
 body{
-  /* background-color: black; */
-  background-image: url("./../assets/images/continue.jpg");
+  background-color: black;
+  /* background-image: url("./../assets/images/continue.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,7 +8,7 @@ body{
 }
 
 .container{
-  margin-top: 10%;
+  margin-top: 7%;
 }
 
 #title{
@@ -43,7 +43,9 @@ body{
 }
 
 .repos{
-  margin-left: 40%;
+  margin-left: 38%;
+  display: flex;
+  justify-content: center;
 }
 
 .box{
@@ -63,10 +65,11 @@ body{
   overflow-y:scroll;
   overflow-x:hidden;
   width:70%; 
-  height: 29.5vw;
+  height: 46vh;
   opacity: 0.8;
   padding-right: 2px;
   padding-left: 5px;
+  margin-left: 50px;
   display:none;
 }
 
@@ -93,7 +96,7 @@ body{
 }
 
 #allRepos::-webkit-scrollbar{
-  width: 18px;
+  width: 13px;
 }
 
 /* #allRepos::-webkit-scrollbar-track{
@@ -157,10 +160,14 @@ body{
 .stats{
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .stats img{
   width: 400px;
   height: 160px;
+}
+
+.btn{
+  color: white;
 }

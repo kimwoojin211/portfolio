@@ -114,6 +114,8 @@ $(function () {
 /*
 goals:
 
-make an animation 
+make a version where repositories are listed horizontally on the bottom (with a scrollbar(or pages) for all repositories)
+make 2 categories: standalone projects and specific function website.
+make another version where every project is listed as expandable cards
 
 */

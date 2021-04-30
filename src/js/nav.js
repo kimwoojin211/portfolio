@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import '../css/nav.css';
 
 export default class Nav {
@@ -11,7 +12,7 @@ export default class Nav {
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" id="homeNav" href="./index.html">Home<span class="sr-only"></span></a>
           <a class="nav-item nav-link" id="aboutNav" href="#">About Me<span class="sr-only"></span></a>
-          <a class="nav-item nav-link" id="resumeNav" href="#">Resume/CV<span class="sr-only"></span></a>
+          <a class="nav-item nav-link" id="cvNav" href="./cv.html">CV<span class="sr-only"></span></a>
           <a class="nav-item nav-link" id="projectsNav" href="./projects.html">Projects<span class="sr-only"></span></a>
           <a class="nav-item nav-link" id="hobbiesNav" href="#">Hobbies<span class="sr-only"></span></a>
         </div>
