@@ -6,8 +6,8 @@ import PdfFile from '../assets/images/CV-portfolio.pdf'
 
 async function navbarInitCV() {
   await Nav.navbarInit();
-  $("#resumeNav").addClass("active");
-  $("#resumeNav > .sr-only").text("(current)");
+  $("#cvNav").addClass("active");
+  $("#cvNav > .sr-only").text("(current)");
 }
 
 $(function () {
