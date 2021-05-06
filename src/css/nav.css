@@ -9,7 +9,7 @@
   padding-bottom: 25px;
   background-size: 400% 400%;
   z-index:2;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 
 }
 .navbar a{
@@ -27,8 +27,8 @@
   background: linear-gradient(45deg, #000808,#03241e);
   animation: gradient 6s ease infinite;
   background-size: 300% 300%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .nav-item{

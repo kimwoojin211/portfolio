@@ -70,14 +70,13 @@ export default class Nav {
     }); 
 
     const fixedNav = () => {
-      if (window.scrollY > 20) {
+      const yScroll = window.scrollY;
+      if (yScroll > 120) {
         $(".navbar").addClass('active');
-        $(".hero").addClass('active');
         $("#contactBox").addClass('active');
       }
       else {
         $(".navbar").removeClass('active');
-        $(".hero").removeClass('active');
         $("#contactBox").removeClass('active');
       }
 

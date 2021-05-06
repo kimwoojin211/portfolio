@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     // projects: './src/js/projects.js',
-    cv: './src/js/cv.js',
+    // cv: './src/js/cv.js',
     // shared: './src/js/nav.js'
   },
   output: {
@@ -46,15 +46,15 @@ module.exports = {
     //     collapseWhitespace: true
     //   }
     // }),
-    new HtmlWebpackPlugin({
-      template: './src/cv.html',
-      filename: 'cv.html',
-      chunks: '.src/js/cv.js',
-      inject: 'body', minify: {
-        removeComments: true,
-        collapseWhitespace: true
-      }
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './src/cv.html',
+    //   filename: 'cv.html',
+    //   chunks: '.src/js/cv.js',
+    //   inject: 'body', minify: {
+    //     removeComments: true,
+    //     collapseWhitespace: true
+    //   }
+    // }),
     new Dotenv()
   ],
   module: {
