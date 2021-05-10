@@ -1,25 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
-    index: './src/js/index.js',
-    // projects: './src/js/projects.js',
-    // cv: './src/js/cv.js',
-    // shared: './src/js/nav.js'
+    index: ['./src/js/index.js', './src/css/styles.css'],
+    projects: ['./src/js/projects.js', './src/css/projects.css'],
+    cv: ['./src/js/cv.js', './src/css/cv.css']
   },
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    },
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+    // publicPath: '/'
   },
   devtool: 'eval-source-map',
   devServer: {
@@ -31,31 +26,30 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      chunks: '.src/js/index.js',
+      chunks: ['index'],
       inject: 'body', minify: {
         removeComments: true,
         collapseWhitespace: true
       }
-    }), 
-    // new HtmlWebpackPlugin({
-    //   template: './src/projects.html',
-    //   filename: 'projects.html',
-    //   chunks: '.src/js/project.js',
-    //   inject: 'body', minify: {
-    //     removeComments: true,
-    //     collapseWhitespace: true
-    //   }
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/cv.html',
-    //   filename: 'cv.html',
-    //   chunks: '.src/js/cv.js',
-    //   inject: 'body', minify: {
-    //     removeComments: true,
-    //     collapseWhitespace: true
-    //   }
-    // }),
-    new Dotenv()
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/projects.html',
+      filename: 'projects.html',
+      chunks: ['projects'],
+      inject: 'body', minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/cv.html',
+      filename: 'cv.html',
+      chunks: ['cv'],
+      inject: 'body', minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
   ],
   module: {
     rules: [
