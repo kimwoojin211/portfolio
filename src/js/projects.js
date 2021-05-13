@@ -15,12 +15,23 @@ function getFeaturedRepos(repos) {
   let featuredRepoHTML = ``;
   let repoId = 0;
   let repo;
+  let repoIframe;
 
   for (const repoName in featuredRepoNames) {
     repoId++;
+    let repoDescription;
+    let repoLanguage;
     repo = repos.find(rep => rep.name === featuredRepoNames[repoName]);
     if (typeof repo === "undefined"){
-      repo = { name: "", svn_url:"projects.html"};
+      repo = { name: "", svn_url:"https://github.com/kimwoojin211"};
+      repoIframe = "assets/images/Github.png";
+      repoDescription = "";
+      repoLanguage = "";
+    }
+    else{
+      repoDescription = repo.description;
+      repoLanguage = repo.language;
+      repoIframe = `https://kimwoojin211.github.io/${repoName}`;
     }
       featuredRepoHTML = `
       <a id="featuredRepo${repoId}" href="${repo.svn_url}" >
@@ -31,21 +42,27 @@ function getFeaturedRepos(repos) {
     `;
     $("#featuredRepos").append(featuredRepoHTML);
     document.getElementById(`featuredRepo${repoId}`).addEventListener("mouseover", event => {
-      $(".box iframe").attr('src', `https://kimwoojin211.github.io/portfolio`);
+      // $(".box iframe").attr('src', repoIframe);
+      $("#descriptionName").text(reformatString(repoName));
+      $("#descriptionDesc").text(repoDescription);
+      $("#descriptionLanguages").text(repoLanguage);
+      $("#description>*").show();
+
     });
     document.getElementById(`featuredRepo${repoId}`).addEventListener("mouseout", event => {
       $(".box iframe").attr('src', '');
+      $("#description>*").hide();
     });
     }
   }
 
-function reformatString(string) {
-  if(string.slice(0,4)=="Repo"){
+function reformatString(str) {
+  if(str == null || str.slice(0,4)=="Repo"){
     return "";
   }
   else {
     const regex = /([A-Z][a-z]+)/g;
-    const words = string.split(regex);
+    const words = str.split(regex);
     return words.filter(entry => entry !== "").join(" ").toString();
   }
 }
