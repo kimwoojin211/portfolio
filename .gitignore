@@ -1,9 +1,0 @@
-node_modules/
-dist/
-.DS_Store
-coverage/
-.env
-whiteboard.txt
-log.txt
-aboutmeshpeal.txt
-unused
