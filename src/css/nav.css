@@ -10,9 +10,7 @@
   background-size: 400% 400%;
   z-index:2;
   transition: all 0.4s ease-in-out;
-
 }
-
 
 .navbar a.navbar-brand{
   font-size: 30px;  
@@ -64,9 +62,6 @@
   position: fixed;
   border-width: 4px;
   border-style: solid;
-  /* border-color: rgb(238, 231, 155); cooler without border-color*/
-  /* flex-direction: column;
-  justify-content: space-around; */
   align-items: stretch;
   top:80px;
   right:10px;
@@ -115,7 +110,6 @@
   display: flex;
 }
 .usernames{
-  /* padding-left: 15px; */
   font-family: sans-serif;
   color: white;
   display:flex;

@@ -81,12 +81,10 @@ body{
   padding-bottom: 20px;
 }
 
-
 #description>*{
   display:none;
   text-align:center;
 }
-
 
 #allReposButton{
   left: 0;
@@ -128,20 +126,6 @@ body{
   
 }
 
-#allRepos{
-  flex-direction: column;
-  background-color: black;
-  overflow-y:scroll;
-  overflow-x:hidden;
-  width:70%; 
-  height: 46vh;
-  opacity: 0.8;
-  padding-right: 2px;
-  padding-left: 5px;
-  margin-left: 50px;
-  display:none;
-}
-
 .card{
   position:static ;
   background-color: black;
@@ -159,32 +143,6 @@ body{
   margin-right: 6px;
   text-align: center;
 }
-
-#allRepos a:hover{
-  text-decoration: none !important;
-}
-
-#allRepos::-webkit-scrollbar{
-  width: 13px;
-}
-
-/* #allRepos::-webkit-scrollbar-track{
-  display: none;
-  background: rgba(26, 25, 25, 0.9);
-  background: grey;
-} */
-
-#allRepos::-webkit-scrollbar-thumb{
-  background: grey;
-  box-shadow: 0px 0px 0px 1000vh black;
-  border-radius: 10px; 
-}
-
-/* a:hover + .box,.box:hover{
-    display: flex;
-    z-index: 100;
-} */
-
 
 .stats{
   display: flex;

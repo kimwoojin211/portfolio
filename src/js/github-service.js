@@ -5,10 +5,10 @@ export default class GithubService {
         if (!response.ok) {
           throw Error(response.statusText);
         }
-      return response.json();
+        return response.json();
       })
       .catch(function (error) {
         return error;
-      })
+      });
   }
 }
