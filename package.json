@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "2.0.0",
-  "description": "#### _yeet_",
+  "description": "#### _Woo Jin Kim's portfolio_",
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "gh-pages": "^3.1.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
   },
@@ -45,5 +46,5 @@
   "bugs": {
     "url": "https://github.com/kimwoojin211/portfolio/issues"
   },
-  "homepage": "https://github.com/kimwoojin211/portfolio#readme"
+  "homepage": "https://kimwoojin211.github.io/portfolio"
 }
