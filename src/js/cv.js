@@ -12,5 +12,5 @@ async function navbarInitCV() {
 
 $(function () {
   navbarInitCV(); 
-  $("#pdf").html(`<embed src=${PdfFile} target='_blank' width="100%" height="100%"/>`);
+  $("#pdf").html(`<embed src=${PdfFile} width="100%" height="100%"/>`);
 });
