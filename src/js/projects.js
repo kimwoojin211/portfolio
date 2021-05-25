@@ -11,7 +11,7 @@ async function navbarInitProject() {
 }
 
 function getFeaturedRepos(repos) {
-  const featuredRepoNames = { TournamentOrganizer: "TournamentOrganizer.Solution", BreathOfTheWildRecipebook: "BOTW-RecipeBook", TapRoomReduxRemix: "tap-room-redux-remix", Repo4:""};
+  const featuredRepoNames = { TournamentOrganizer: "TournamentOrganizer.Solution", BreathOfTheWildRecipebook: "BOTW-RecipeBook", TapRoomReduxRemix: "tap-room-redux-remix", WorriedWednesday:"WorriedWednesday"};
   let featuredRepoHTML = ``;
   let repoId = 0;
   let repo;

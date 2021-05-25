@@ -156,6 +156,10 @@
   display:flex;
 }
 
+#twitchNav{
+  display: none;
+}
+
 #liveCircle{
   background-color: red;
   height: 10px;
