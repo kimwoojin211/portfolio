@@ -1,6 +1,11 @@
-export default class GithubService {
-  static getRepo() {
-    return fetch(`https://api.github.com/users/kimwoojin211/repos?page=1&per_page=100`)
+export default class TwitchService {
+  static getTwitchInfo() {
+    return fetch(`https://api.twitch.tv/helix/search/channels?query=300hHZ`,{
+      headers:{
+        'Client-ID': `${process.env.TWITCH_CLIENTID}`,
+        'Authorization': `Bearer ${process.env.TWITCH_ACCESSTOKEN}`
+      }
+    })
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);

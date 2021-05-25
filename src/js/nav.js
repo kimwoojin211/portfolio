@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import '../css/nav.css';
+import TwitchService from './twitch-service.js';
 
 export default class Nav {
   static navbarInit()
@@ -46,6 +47,22 @@ export default class Nav {
 
     $(".contactIcons").children().css("display", "none");
     $(".contactInfo").children().css("display", "none");
+
+
+    TwitchService.getTwitchInfo()
+      .then(function (response) {
+        if (response instanceof Error) {
+          throw Error(`Github API error: ${response.message}`);
+        }
+        const userChannelData = response.data[0];
+        if (userChannelData.is_live) {
+          $("#twitchNav").css('display', 'flex');
+        }
+        else{
+          $("#twitchNav").css('display', 'none');
+        }
+        
+      });
 
     //click on contact function
     $("#contact").on("click", function (event) {
