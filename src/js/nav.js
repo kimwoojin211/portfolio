@@ -13,6 +13,7 @@ export default class Nav {
           <a class="nav-item nav-link" id="homeNav" href="./index.html">Home<span class="sr-only"></span></a>
           <a class="nav-item nav-link" id="cvNav" href="./cv.html">CV<span class="sr-only"></span></a>
           <a class="nav-item nav-link" id="projectsNav" href="./projects.html">Projects<span class="sr-only"></span></a>
+          <a class="nav-item nav-link" id="twitchNav" href="./twitch.html">Twitch<span class="sr-only"></span></a>
         </div>
       </div>
       <a class="nav-item" id="contact" href="#">Contact</a>

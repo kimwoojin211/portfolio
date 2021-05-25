@@ -7,7 +7,8 @@ module.exports = {
   entry: {
     index: ['./src/js/index.js', './src/css/styles.css'],
     projects: ['./src/js/projects.js', './src/css/projects.css'],
-    cv: ['./src/js/cv.js', './src/css/cv.css']
+    cv: ['./src/js/cv.js', './src/css/cv.css'],
+    twitch: ['./src/js/twitch.js', './src/css/twitch.css']
   },
   output: {
     filename: '[name].bundle.js',
@@ -41,6 +42,15 @@ module.exports = {
       template: './src/cv.html',
       filename: 'cv.html',
       chunks: ['cv'],
+      inject: 'body', minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/twitch.html',
+      filename: 'twitch.html',
+      chunks: ['twitch'],
       inject: 'body', minify: {
         removeComments: true,
         collapseWhitespace: true
