@@ -1,0 +1,32 @@
+.footerWrapper {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerOverlay {
+  display: flex;
+  background: rgba(0,0,0,0.6);
+  border-radius: 1.5em;
+  border-width: 0.7em;
+  border-style: solid;
+  border-color: transparent;
+  font-size: 0.9em;
+  margin-bottom: 2vh;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+
+}
+
+.footerOverlay a{
+  color: rgb(244, 229, 166, 0.7);
+}
+
+.footerOverlay p{
+  color: white;
+  margin: 0;
+}
