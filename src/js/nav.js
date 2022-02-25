@@ -27,7 +27,7 @@ export default class Nav {
 
     <div id="contactBox">
       <div class="contactIcons col-4">
-        <a href="https://www.instagram.com/w00j_w00j" class="ig icons"><img class="ig icons"
+        <a href="https://www.instagram.com/w00j__" class="ig icons"><img class="ig icons"
             src="https://freeiconshop.com/wp-content/uploads/edd/instagram-new-flat.png" alt="Instagram"></a>
         <a class="discord icons" href="https://discord.com/channels/@me"><img class="discord icons"
             src="https://cdn.iconscout.com/icon/free/png-256/discord-2752210-2285027.png" alt="Discord"></a>

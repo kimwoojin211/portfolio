@@ -66,7 +66,7 @@ To set up on a local machine:
 MIT
 
 Copyright (c) 2020 Woo Jin Kim
-## Contact Information
+## Contact Information 
 
 _Woo Jin Kim (kimwoojin211@gmail.com)_
 

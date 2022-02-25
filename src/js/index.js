@@ -2,13 +2,15 @@ import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/styles.css';
 import Nav from './nav.js';
+import Footer from './footer.js';
 
 $(function(){
-  navbarInitHome();
+  InitHome();
 });
 
-async function navbarInitHome(){
+async function InitHome(){
   await Nav.navbarInit();
+  await Footer.footerInit();
   $("#homeNav").addClass("active");
   $("#homeNav > .sr-only").text("(current)");
   scrollTransitions();
